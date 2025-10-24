@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Notes</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <div id="recorder-container">
+    <h1>Quick Notes</h1>
+
+    <textarea id="content" placeholder="Type your notes here..." spellcheck="false" autocomplete="off"></textarea>
+
+    <div class="controls">
+      <button id="save-btn" class="btn start">Save</button>
+      <button id="clear-btn" class="btn pause">Clear</button>
+      <button id="delete-btn" class="btn stop">Delete</button>
+    </div>
+
+    <div id="status">No notes saved</div>
+  </div>
+
+  <script type="module" src="panel.js"></script>
+</body>
+</html>

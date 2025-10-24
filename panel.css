@@ -1,0 +1,133 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: linear-gradient(145deg, #1b1b2a, #24243e);
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh;
+}
+
+/* ===== Container ===== */
+#recorder-container {
+  width: 300px;
+  padding: 24px 20px;
+  border-radius: 18px;
+  background: rgba(30, 30, 47, 0.88);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.35s ease;
+}
+
+#recorder-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== Heading ===== */
+#recorder-container h1 {
+  font-size: 20px;
+  margin-bottom: 18px;
+  color: #ff5c8a;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+}
+
+/* ===== Controls ===== */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  flex: 1;
+  padding: 9px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: all 0.25s ease;
+  background: linear-gradient(135deg, #3a3a5a, #1e1e2f);
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.start {
+  background: linear-gradient(135deg, #00e0ff, #00b8d4);
+  color: #0e0e1a;
+}
+.start:hover {
+  background: linear-gradient(135deg, #00b8d4, #009bb0);
+}
+
+.pause {
+  background: linear-gradient(135deg, #ffb347, #ff8c00);
+  color: #1f1f2f;
+}
+.pause:hover {
+  background: linear-gradient(135deg, #ff9933, #e68200);
+}
+
+.stop {
+  background: linear-gradient(135deg, #ff4b5c, #d63246);
+}
+.stop:hover {
+  background: linear-gradient(135deg, #ff2b46, #c9243a);
+}
+
+/* ===== Notes Textarea ===== */
+#content {
+  width: 100%;
+  height: 110px;
+  margin-bottom: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  resize: none;
+  font-size: 14px;
+  color: #f1f1f1;
+  background: rgba(255, 255, 255, 0.06);
+  outline: none;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+#content:focus {
+  box-shadow: 0 0 10px rgba(0, 208, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Status ===== */
+#status {
+  font-size: 13px;
+  color: #bcbcbc;
+  margin-top: 8px;
+  opacity: 0.9;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+#status.success {
+  color: #00ffb7;
+}
+
+#status.error {
+  color: #ff4b5c;
+}
