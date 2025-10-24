@@ -10,10 +10,8 @@
   const contentBox = document.getElementById("content");
   const statusBox = document.getElementById("status");
 
-  // 🧹 Clear the default "No notes saved" message
   statusBox.textContent = "";
 
-  // Create a dedicated status message element (always at top)
   const statusMessage = document.createElement("div");
   statusBox.appendChild(statusMessage);
 
@@ -64,7 +62,6 @@
     await browser.storage.local.remove(url);
     contentBox.value = "";
 
-    // 🧹 Remove all note elements but keep the status message
     const noteItems = statusBox.querySelectorAll(".note-item");
     noteItems.forEach((el) => el.remove());
 
